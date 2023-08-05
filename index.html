@@ -1,104 +1,267 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Ciência de Dados</title>
     <style>
-        /* Estilos gerais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            background-color: #f0f0f0;
         }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        header h1 {
-            margin: 0;
+        .header {
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        .header h1 {
+            font-size: 40px;
         }
 
-        nav li {
-            display: inline-block;
-            margin-right: 1rem;
+        .header p {
+            font-size: 20px;
         }
 
-        nav a {
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #eeeeee;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: #333333;
             text-decoration: none;
-            color: #fff;
+            font-weight: bold;
         }
 
-        /* Estilos para a seção "Sobre" */
-        #sobre {
-            background-color: #f9f9f9;
-            padding: 2rem;
+        .nav a:hover {
+            color: #0099ff;
         }
 
-        /* Estilos para a seção "Projetos" */
-        #projetos {
-            padding: 2rem;
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
-        .projeto {
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            padding: 1rem;
+        .section h2 {
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #0099ff;
         }
 
-        /* Estilos para a seção "Contato" */
-        #contato {
-            background-color: #f9f9f9;
-            padding: 2rem;
+        .section p {
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .section ul {
+            width: 100%;
+            margin-bottom: 20px;
+            list-style-type: none;
+        }
+
+        .section li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #0099ff;
+            color: white;
+            font-size: 16px;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Portfólio de Ciência de Dados</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="sobre">
-        <h2>Sobre</h2>
-        <p>
-            Bem-vindo ao meu portfólio de ciência de dados! Aqui você encontrará informações sobre mim e meus projetos.
-        </p>
-    </section>
-
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <div class="projeto">
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1.</p>
+    <div class="container">
+        <div class="header">
+            <h1>Meu Portfólio de Ciência de Dados</h1>
+            <p>Olá, eu sou Fulano de Tal, um cientista de dados apaixonado por resolver problemas com dados.</p>
         </div>
-        <div class="projeto">
-            <h3>Projeto 2</h3>
-            <p>Descrição do projeto 2.</p>
+        <div class="nav">
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#educacao">Educação</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
         </div>
-    </section>
+        <div class="section" id="sobre">
+           <h2>Sobre Mim</h2>
+           <p>Eu sou um cientista de dados com mais de 5 anos de experiência em análise de dados, machine learning e visualização de dados. Eu gosto de explorar diferentes conjuntos de dados, aplicar técnicas estatísticas e algoritmos de aprendizado de máquina, e criar dashboards interativos e relatórios para comunicar os resultados. Eu tenho interesse em áreas como saúde, educação, finanças e meio ambiente.</p>
+           <img src="foto.jpg" alt="Minha foto">
+       </div>
+       <div class="section" id="educacao">
+           <h2>Educação</h2>
+           <p>Eu tenho uma graduação em Estatística pela Universidade de São Paulo (USP) e um mestrado em Ciência de Dados pela Universidade de Campinas (UNICAMP). Durante a minha formação acadêmica, eu participei de diversos projetos de pesquisa e extensão, publicando artigos em revistas e congressos nacionais e internacionais. Eu também fiz vários cursos online e presenciais para me atualizar sobre as novas ferramentas e tecnologias na área de ciência de dados.</p>
+           <ul>
+               <li>Estatística - USP</li>
+               <li>Ciência de Dados - UNICAMP</li>
+               <li>Machine Learning - Coursera</li>
+               <li>Data Visualization - Udemy</li>
+               <li>Python for Data Science - DataCamp</li>
+           </ul>
+       </div>
+       <div class="section" id="habilidades">
+           <h2>Habilidades</h2>
+           <p>Eu tenho conhecimento e experiência em diversas linguagens de programação, ferramentas e frameworks para ciência de dados, tais como:</p>
+           <ul>
+               <li>Python</li>
+               <li>R</li>
+               <li>SQL</li>
+               <li>Pandas</li>
+               <li>Numpy</li>
+               <li>Scikit-learn</li>
+               <li>TensorFlow</li>
+               <li>PyTorch</li>
+               <li>Matplotlib</li>
+               <li>Seaborn</li>
+               <li>Plotly</li>
+               <li>Dash</li>
+               <li>Shiny</li>
+               <li>Jupyter Notebook</li>
+               <li>RStudio</li>
+               <li>Google Colab</li>
+               <li>AWS</li>
+               <li>Azure</li>
+               <li>Git</li>
+           </ul>
+       </div>
+       <div class="section" id="projetos">
+           <h2>Projetos</h2>
+           <p>Aqui estão alguns dos meus projetos de ciência de dados que eu desenvolvi ao longo da minha carreira. Você pode clicar nos links para ver os códigos, os dados e os resultados.</p>
+           <ul>
+               <li><a href="projeto1.html">Análise da COVID-19 no Brasil</a></li>
+               <li><a href="projeto2.html">Previsão de Churn de Clientes de Telecomunicações</a></li>
+               <li><a href="projeto3.html">Reconhecimento de Imagens de Flores</a></li>
+               <li><a href="projeto4.html">Dashboard Interativo de Vendas de E-commerce</a></li>
+           </ul>
+       </div>
+       <div class="section" id="contato">
+           <h2>Contato</h2>
+           <p>Se você quiser entrar em contato comigo, você pode me enviar um e-mail, uma mensagem no LinkedIn ou no Twitter. Eu ficarei feliz em responder e conversar com você.</p>
+           <ul>
+               <li><a href="mailto:fulano@gmail.com">fulano@gmail.com</a></li>
+               <li><a href="https://www.linkedin.com/in/fulano/">LinkedIn</a></li>
+               <li><a href="https://twitter.com/fulano/">Twitter</a></li>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>
-            Você pode entrar em contato comigo por e-mail em: exemplo@email.com
-        </p>
-    </section>
-</body>
-</html>
+           </ul>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+       </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+        </div>
+
+
+        .footer {
+            background-color: #333333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 18px;
+        }
+    </style>
+
+
+    .footer {
+        background-color: #333333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+    </style>
+
+
+    .footer {
+        background-color: #333333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+    </style>
+
+
+    .footer {
+        background-color: #333333;
+        color: white
