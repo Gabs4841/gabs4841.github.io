@@ -1,9 +1,6 @@
-<html>
-<head>
  <title>Gabriel Medina - Portifolio</title>
 <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="C:/imagens/favicon.ico">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Adicionar esta tag meta viewport -->
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
 /* Estilo do menu */
 
@@ -58,7 +55,8 @@
 
 /* Estilo da imagem do conteúdo */
 .tabcontent img {
-  width: 100%; /* Mudar este valor para definir a largura das imagens em porcentagem */
+  width: 300px;
+  height: auto;
 }
 
 /* Estilo do menu hamburguer */
@@ -91,7 +89,7 @@
   display: block;
 }
 
-/* Estilo do rodapé */ 
+/* Estilo do rodapé */ /* Adicionar este bloco de código */
 
 .footer {
     background-color:#333333; 
@@ -129,47 +127,24 @@
 
 <!-- Conteúdo da aba Home -->
 <div id="Home" class="tabcontent">
- <h3>Olá, eu sou Gabriel Medina da Assunção.</h3>
- <p>Eu sou um analista de dados apaixonado por explorar, visualizar e comunicar dados. Eu tenho experiência em Python, SQL, Power BI e outras ferramentas de análise de dados.</p>
- <p>Eu me formei em Ciência da Computação pela Universidade de São Paulo em 2020. Desde então, eu tenho trabalhado como analista de dados em uma empresa de consultoria.</p>
- <p>Os meus interesses incluem aprendizado de máquina, inteligência artificial, big data e visualização de dados. Eu gosto de aprender novas técnicas e ferramentas para resolver problemas complexos com dados.</p>
- <p>Os meus objetivos profissionais são desenvolver as minhas habilidades de análise de dados, participar de projetos desafiadores e inovadores e contribuir para a sociedade com o meu trabalho.</p>
+ <h3>PLACEHOLDER</h3>
+ <p>SITE EM CONSTRUÇÃO</p>
 </div>
 
 <!-- Conteúdo da aba Projetos -->
 <div id="Projetos" class="tabcontent">
- <h3>Alguns dos meus projetos mais recentes são:</h3>
- <img src="projeto1.png" srcset="projeto1-pequeno.png 600w, projeto1-grande.png 1200w" alt="Projeto1"> <!-- Adicionar o atributo srcset com diferentes imagens para diferentes tamanhos de tela -->
- <p>Este é um projeto que eu fiz para analisar o consumo de energia elétrica no Brasil usando Streamlit e Plotly.</p>
- <p>Você pode ver o código do projeto <a href="2">aqui</a>, os dados usados <a href="3">aqui</a> e o resultado final <a href="4">aqui</a>.</p>
- <img src="projeto2.png" srcset="projeto2-pequeno.png 600w, projeto2-grande.png 1200w" alt="Projeto2"> <!-- Adicionar o atributo srcset com diferentes imagens para diferentes tamanhos de tela -->
- <p>Este é um projeto que eu fiz para prever o preço de imóveis em São Paulo usando scikit-learn e TensorFlow.</p>
- <p>Você pode ver o código do projeto <a href="5">aqui</a>, os dados usados <a href="6">aqui</a> e o resultado final <a href="7">aqui</a>.</p>
+ <h3>PLACEHOLDER</h3>
+ <img src="projeto1.png" alt="Projeto1">
+ <p>SITE EM CONSTRUÇÃO.</p>
+ <img src="projeto2.png" alt="Projeto2">
+ <p>SITE EM CONSTRUÇÃO.</p>
 </div>
 
 <!-- Conteúdo da aba Habilidades -->
 <div id="Habilidades" class="tabcontent">
- <h3>As minhas principais habilidades são: <i class="fa-solid fa-angle-down"></i></h3> 
- <img src="habilidades.png" srcset="habilidades-pequeno.png 600w, habilidades-grande.png 1200w" alt="Habilidades"> <!-- Adicionar o atributo srcset com diferentes imagens para diferentes tamanhos de tela -->
- <p>Este é um gráfico que mostra o meu nível de proficiência em diferentes habilidades técnicas e interpessoais.</p>
- <p>As minhas habilidades técnicas incluem:</p>
- <ul>
-  <li>Python</li>
-  <li>SQL</li>
-  <li>Power BI</li>
-  <li>Excel</li>
-  <li>R</li>
-  <li>Tableau</li>
- </ul>
- <p>As minhas habilidades interpessoais incluem:</p>
- <ul>
-  <li>Comunicação</li>
-  <li>Trabalho em equipe</li>
-  <li>Criatividade</li>
-  <li>Liderança</li>
-  <li>Resolução de problemas</li>
-  <li>Aprendizado contínuo</li>
- </ul>
+ <h3>PLACEHOLDER: <i class="fa-solid fa-angle-down"></i></h3> 
+ <img src="habilidades.png" alt="Foto">
+ <p>SITE EM CONSTRUÇÃO.</p>
 </div>
 
 <!-- Rodapé com dados de contato e links para redes sociais --> 
@@ -192,6 +167,43 @@
   margin-right: 10px;
 }
 </style>
+
+<script>
+// Função para abrir uma aba específica
+function openTab(evt, tabName) {
+
+// Obter todos os elementos com a classe "tabcontent" e escondê-los
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+
+// Obter todos os elementos com a classe "tablinks" e remover a classe "active"
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+// Mostrar o conteúdo da aba atual e adicionar a classe "active" ao botão correspondente
+document.getElementById(tabName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+
+// Função para abrir e fechar o menu hamburguer
+function toggleMenu() {
+  var hamburger = document.getElementsByClassName("hamburger")[0];
+  var tablinks = document.getElementsByClassName("tablinks");
+  hamburger.classList.toggle("is-active");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.toggle("show");
+  }
+}
+
+// Adicionar um evento de clique ao menu hamburguer
+var hamburger = document.getElementsByClassName("hamburger")[0];
+hamburger.addEventListener("click", toggleMenu);
+</script>
 
 </body>
 </html>
