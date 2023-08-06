@@ -1,274 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gabriel Medina - Portifolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Gabriel Medina - Portifolio</title>
+   <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://imgur.com/gFo7aiD.png">
-  <style>
-    /* Estilos para dispositivos móveis */
-    @media screen and (max-width: 768px) {
-      .tabcontent img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .icons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .icons a {
-        margin-bottom: 10px;
-      }
-
-      .icons img {
-        width: 60px;
-        height: auto;
-      }
-
-      /* Estilo para o ícone do envelope */
-      .icons .fa-envelope {
-        font-size: 20px;
-        margin-right: 5px;
-      }
-    }
-
-    /* Estilo para o efeito de digitação */
-    .typewriter {
-      overflow: hidden;
-      border-right: 0.15em solid black;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: 0.15em;
-      animation: typing 2s steps(40, end),
-                 blink-caret 0.75s step-end infinite;
-    }
-
-    /* Animação de digitação */
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 7ch; }
-    }
-
-    /* Animação do "cursor" piscando */
-    @keyframes blink-caret {
-      from, to { border-color: transparent; }
-      50% { border-color: black; }
-    }
-
-    /* Resto dos estilos gerais */
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-    }
-
-    .tab {
-      overflow: hidden;
-      border: 1px solid transparent; 
-      background-color: #ffffff; 
-      display: flex; 
-      justify-content: flex-end;
-      width: 97%; 
-      margin-left: auto; 
-      margin-right: auto;
-      margin-top: 10px; 
-      align-items: center;
-    }
-
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-      font-family: 'Montserrat', sans-serif;
-      border-radius: 10px; 
-    }
-
-    .tab button:hover {
-      background-color: #d9d9d9;
-    }
-
-    .tab button.active {
-      background-color: #bfbfbf;
-    }
-
-    .tabcontent {
-      display: none;
-      padding: 6px 12px;
-      border: 1px solid transparent; 
-      border-top: none;
-      transition: 0.5s;
-    }
-
-    .tabcontent h3 {
-      font-size: 24px;
-    }
-
-    .tabcontent img {
-      width: 300px;
-      height: auto;
-    }
-
-    .hamburger {
-      width: 30px;
-      height: 30px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .hamburger span {
-      height: 4px;
-      width: 100%;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: all 0.3s ease-in-out;
-    }
-
-    .hamburger span:before,
-    .hamburger span:after {
-      content: "";
-      height: 4px;
-      width: 100%;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .hamburger span:before {
-      top: -10px;
-    }
-
-    .hamburger span:after {
-      bottom: -10px;
-    }
-
-    .hamburger.is-active span {
-      transform: rotate(180deg);
-    }
-
-    .hamburger.is-active span:before {
-      transform: translateY(10px) rotate(45deg);
-    }
-
-    .hamburger.is-active span:after {
-      transform: translateY(-10px) rotate(-45deg);
-    }
-
-    .tablinks {
-      display: none;
-    }
-
-    .tablinks.show {
-      display: block;
-    }
-
-    .footer {
-      background-color: #333333; 
-      color: #ffffff; 
-      text-align: center; 
-      padding-top: 10px; 
-      padding-bottom: 10px; 
-      margin-top: auto; 
-      font-family: 'Montserrat', sans-serif; 
-      font-size: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .footer a { 
-      color: #ffffff; 
-      text-decoration: none;
-    }
-
-    .footer a:hover { 
-      color: #cccccc;
-      transform: scale(1.1);
-    }
-
-    .footer img {
-      width: 100px; 
-      height: auto;
-      display: inline-block; 
-      margin-right: 10px;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: space-between;
-      width: 500px;
-    }
-
-    .name {
-      text-align: left;
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-      margin-left: 10px;
-      margin-right: 20px;
-      font-weight: bold;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .hamburger.is-active + .name {
-      display: none; 
-    }
-
-    .footer img {
-      width: 100px; 
-      height: auto;
-      display: inline-block; 
-      margin-right: 10px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+
+.tab {
+  overflow: hidden;
+  border: 1px solid transparent; 
+  background-color: #ffffff; 
+  display: flex; 
+  justify-content: flex-end;
+  width: 97%; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 10px; 
+  align-items: center;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px; 
+}
+
+.tab button:hover {
+  background-color: #d9d9d9
+}
+
+.tab button.active {
+  background-color: #bfbfbf;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid transparent; 
+  border-top: none;
+  transition: 0.5s;
+}
+
+.tabcontent h3 {
+  font-size: 24px;
+}
+
+.tabcontent img {
+  width: 300px;
+  height: auto;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:before,
+.hamburger span:after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:before {
+  top: -10px;
+}
+
+.hamburger span:after {
+  bottom: -10px;
+}
+
+.hamburger.is-active span {
+  transform: rotate(180deg);
+}
+
+.hamburger.is-active span:before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.is-active span:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+
+.tablinks {
+  display: none;
+}
+
+.tablinks.show {
+  display: block;
+}
+
+.footer {
+    background-color:#333333; 
+    color:#ffffff; 
+    text-align:center; 
+    padding-top:10px; 
+    padding-bottom:10px; 
+    margin-top:auto; 
+    font-family:'Montserrat', sans-serif; 
+    font-size:14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a { 
+    color:#ffffff; 
+    text-decoration:none
+}
+
+.footer a:hover { 
+    color:#cccccc;
+    transform: scale(1.1);
+}
+
+.footer img {
+  width: 100px; 
+  height: auto;
+  display: inline-block; 
+  margin-right: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.name {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out; /* Adicione essa linha */
+}
+
+.hamburger.is-active + .name {
+  display: none; 
+}
+
+.footer img {
+  width: 100px; 
+  height: auto;
+  display: inline-block; 
+  margin-right: 10px;
+}
+</style>
 <body>
 
 <div class="tab">
-  <p class="name">Menu</p>
-  <div class="hamburger">
+ <p class="name">Menu</p>
+ <div class="hamburger"> 
     <span></span>
-  </div>
-  <button class="tablinks show" onclick="openTab(event, 'Home')">Inicio</button>
+ </div>
+ <button class="tablinks show" onclick="openTab(event, 'Home')">Inicio</button>
   <button class="tablinks show" onclick="openTab(event, 'Sobre')">Sobre</button>
-  <button class="tablinks show" onclick="openTab(event, 'Projetos')">Projetos</button>
+ <button class="tablinks show" onclick="openTab(event, 'Projetos')">Projetos</button> 
   <button class="tablinks show" onclick="openTab(event, '#rodape')">Contato</button>
 </div>
 
 <div id="Home" class="tabcontent">
-  <h3><span class="typewriter">PLACEHOLDER</span></h3>
-  <p>SITE EM CONSTRUÇÃO</p>
+ <h3>PLACEHOLDER</h3>
+ <p>SITE EM CONSTRUÇÃO</p>
 </div>
 
 <div id="Sobre" class="tabcontent">
-  <h3><span class="typewriter">PLACEHOLDERRRR</span></h3>
-  <p>SITE EM CONSTRUÇÃO</p>
+ <h3>PLACEHOLDERRRR</h3>
+ <p>SITE EM CONSTRUÇÃO</p>
 </div>
 
 <div id="Projetos" class="tabcontent">
-  <h3><span class="typewriter">PLACEHOLDER</span></h3>
-  <p>SITE EM CONSTRUÇÃO.</p>
+ <h3>PLACEHOLDER</h3>
+ <img src="projeto1.png" alt="Projeto1">
+ <p>SITE EM CONSTRUÇÃO.</p>
+ <img src="projeto2.png" alt="Projeto2">
+ <p>SITE EM CONSTRUÇÃO.</p>
 </div>
 
-<div class="footer" id="rodape">
-  <p>Contato:</p>
-  <a href="mailto:gabriell_medina@Live.com"><i class="fab fa-envelope"></i> gabriell_medina@Live.com</a>
-  <div class="icons">
-    <a href="https://wa.me/5513991363121?text" target="_blank"><img src="https://imgur.com/NdRmcgk.png" alt="Whatsapp"></a>
-    <a href="https://www.linkedin.com/in/gabriellmedina/" target="_blank"><img src="https://imgur.com/cjLEO7C.png" alt="Linkedin"></a>
-    <a href="https://github.com/gabs4841" target="_blank"><img src="https://imgur.com/yBVZk4a.png" alt="Github"></a>
-  </div>
-  <p>© 2023 Gabriel Medina da Assunção</p>
+<div class="footer" id=“rodape”>
+    <p>Contato:</p>
+    <div class="icons">
+    <a href="https://wa.me/5513991363121?text" target=“_blank”"><img src="https://imgur.com/NdRmcgk.png" alt="Whatsapp"></a>
+    <a href="https://www.linkedin.com/in/gabriellmedina/" target=“_blank”"><img src="https://imgur.com/cjLEO7C.png" alt="Linkedin"></a>
+    <a href="https://github.com/gabs4841" target=“_blank”"><img src="https://imgur.com/yBVZk4a.png" alt="Github"></a>
+    <a href="mailto:gabriell_medina@Live.com"><img src="https://imgur.com/FD6uzg0.png" alt="Email"></a>
+    </div>
+    <p><i class="fa-brands fa-envelope"></i> gabriell_medina@Live.com</p>
+    <p>© 2023 Gabriel Medina da Assunção</p> 
 </div>
 
 <script>
@@ -325,33 +274,11 @@ function openTab(evt, tabName) {
   hamburger.classList.remove("is-active");
 }
 
-// Função para exibir o texto com efeito de digitação
-function showTypingText() {
-  var texts = document.querySelectorAll(".typewriter");
-  texts.forEach(function(element) {
-    var text = element.innerText;
-    element.innerText = "";
-    var index = 0;
-
-    // Função para simular a digitação
-    function typeWriter() {
-      if (index < text.length) {
-        element.innerText += text.charAt(index);
-        index++;
-        setTimeout(typeWriter, 100); // Velocidade de digitação (em milissegundos)
-      }
-    }
-
-    typeWriter();
-  });
-}
-
 // Chamar a função hideTablinks quando a página for carregada
 window.onload = function () {
-  hideTablinks();
-  showTypingText(); // Chamar a função showTypingText para exibir o texto com efeito de digitação
-  openTab(null, 'Home'); // Chamar a função openTab para exibir a aba "Inicio" quando a página carregar
-};
+    hideTablinks();
+    openTab(null, 'Home'); // Chamar a função openTab para exibir a aba "Inicio" quando a página carregar
+  };
 
 // Adicionar um evento de clique ao menu hambúrguer para chamar a função toggleTablinks
 var hamburger = document.getElementsByClassName("hamburger")[0];
@@ -359,6 +286,7 @@ hamburger.addEventListener("click", function() {
   this.classList.toggle("is-active");
   toggleTablinks();
 });
+
 </script>
 </body>
 </html>
