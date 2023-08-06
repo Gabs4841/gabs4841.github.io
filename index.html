@@ -1,85 +1,211 @@
 <html>
 <head>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+ <title>Gabriel Medina - Portifolio</title>
+<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+/* Estilo do menu */
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
+.tab {
+  overflow: hidden;
+  border: 1px solid transparent; 
+  background-color: #ffffff; 
+  display: flex; 
+  justify-content: flex-end;
+  width: 97%; 
+  margin-left: auto; 
+  margin-right: auto;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .header {
-            background-color: #333333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+/* Estilo dos botões do menu */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px; 
+}
 
-        .header h1 {
-            font-size: 40px;
-        }
+/* Mudar a cor dos botões ao passar o mouse */
+.tab button:hover {
+  background-color: #d9d9d9
+}
 
-        .header p {
-            font-size: 20px;
-        }
+/* Criar uma classe ativa para o botão atual */
+.tab button.active {
+  background-color: #bfbfbf;
+}
 
-        .nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #eeeeee;
-            padding: 10px;
-        }
+/* Estilo do conteúdo das abas */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid transparent; 
+  border-top: none;
+  transition: 0.5s;
+}
 
-        .nav a {
-            color: #333333;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Estilo do título do conteúdo */
+.tabcontent h3 {
+  font-size: 24px;
+}
 
-        .nav a:hover {
-            color: #0099ff;
-        }
+/* Estilo da imagem do conteúdo */
+.tabcontent img {
+  width: 300px;
+  height: auto;
+}
 
-        .section {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
+/* Estilo do menu hamburguer */
+.hamburger {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 25px;
+}
 
-        .section h2 {
-            width: 100%;
-            margin-bottom: 20px;
-            font-size: 30px;
-            color: #0099ff;
-        }
+.hamburger.is-active span {
+  transform: rotate(180deg);
+}
 
-        .section p {
-            width: 100%;
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333333;
-        }
+.hamburger span {
+  width: 35px;
+  height: 5px;
+  background-color: #1a1a1a;
+  position: absolute;
+  border-radius: 5px;
+}
 
-        .section ul {
-            width: 100%;
-            margin-bottom: 20px;
-            list-style-type: none;
-        }
+/* Esconder os botões do menu quando o menu hamburguer estiver ativo */
+.tablinks {
+  display: none;
+}
 
-        .section li {
-            display: inline-block;
-            margin-right: 10px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #0099ff;
-            color: white
+.tablinks.show {
+  display: block;
+}
+
+/* Estilo do rodapé */ /* Adicionar este bloco de código */
+
+.footer {
+    background-color:#333333; 
+    color:#ffffff; 
+    text-align:center; 
+    padding-top:10px; 
+    padding-bottom:10px; 
+    margin-top:auto; 
+    font-family:'Montserrat', sans-serif; 
+    font-size:14px
+}
+
+.footer a { 
+    color:#ffffff; 
+    text-decoration:none
+}
+
+.footer a:hover { 
+    color:#cccccc
+}
+</style>
+</head>
+<body>
+
+<!-- Menu com botões para cada aba -->
+<div class="tab">
+<a href="#" style="text-decoration:none;color:#000000;text-align:center;display:flex;align-items:center" onclick="openTab(event, 'Home')">Gabriel Medina da Assunção</a>
+ <div class="hamburger is-active"> 
+    <span></span>
+ </div>
+ <button class="tablinks show" onclick="openTab(event, 'Home')">Sobre</button>
+ <button class="tablinks show" onclick="openTab(event, 'Projetos')">Projetos</button> 
+ <button class="tablinks show" onclick="openTab(event, 'Habilidades')">Contato</button> 
+</div>
+
+<!-- Conteúdo da aba Home -->
+<div id="Home" class="tabcontent">
+ <h3>PLACEHOLDER</h3>
+ <p>SITE EM CONSTRUÇÃO</p>
+</div>
+
+<!-- Conteúdo da aba Projetos -->
+<div id="Projetos" class="tabcontent">
+ <h3>PLACEHOLDER</h3>
+ <img src="projeto1.png" alt="Projeto1">
+ <p>SITE EM CONSTRUÇÃO.</p>
+ <img src="projeto2.png" alt="Projeto2">
+ <p>SITE EM CONSTRUÇÃO.</p>
+</div>
+
+<!-- Conteúdo da aba Habilidades -->
+<div id="Habilidades" class="tabcontent">
+ <h3>PLACEHOLDER: <i class="fa-solid fa-angle-down"></i></h3> 
+ <img src="habilidades.png" alt="Foto">
+ <p>SITE EM CONSTRUÇÃO.</p>
+</div>
+
+<!-- Rodapé com dados de contato e links para redes sociais --> 
+
+<div class="footer">
+    <p>Contato:</p>
+    <a href="https://wa.me/5513991363121?text"><img src="https://imgur.com/NdRmcgk.png" alt="Whatsapp"></a>
+    <a href="https://www.linkedin.com/in/gabriellmedina/"><img src="https://imgur.com/cjLEO7C.png" alt="Linkedin"></a>
+    <a href="https://github.com/gabs4841"><img src="https://imgur.com/yBVZk4a.png" alt="Github"></a>
+    <a href="mailto:gabriell_medina@Live.com"><img src="https://imgur.com/FD6uzg0.png" alt="Email"></a>
+    <p><i class="fa-brands fa-envelope"></i> gabriell_medina@Live.com</p>
+    <p>©2023 Gabriel Medina da Assunção</p> 
+</div>
+
+<style>
+.footer img {
+  width: 100px; 
+  height: auto;
+  display: inline-block; 
+  margin-right: 10px;
+}
+</style>
+
+<script>
+// Função para abrir uma aba específica
+function openTab(evt, tabName) {
+  
+// Obter todos os elementos com a classe "tabcontent" e escondê-los
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+
+// Obter todos os elementos com a classe "tablinks" e remover a classe "active"
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+
+// Mostrar o conteúdo da aba atual e adicionar a classe "active" ao botão correspondente
+document.getElementById(tabName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+
+// Função para abrir e fechar o menu hamburguer
+function toggleMenu() {
+  var hamburger = document.getElementsByClassName("hamburger")[0];
+  var tablinks = document.getElementsByClassName("tablinks");
+  hamburger.classList.toggle("is-active");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.toggle("show");
+  }
+}
+
+// Adicionar um evento de clique ao menu hamburguer
+var hamburger = document.getElementsByClassName("hamburger")[0];
+hamburger.addEventListener("click", toggleMenu);
+</script>
+
+</body>
+</html>
