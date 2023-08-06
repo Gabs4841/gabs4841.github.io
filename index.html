@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Medina - Portifolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://imgur.com/gFo7aiD.png">
+</head>
+<body>
+
+<div class="tab">
+  <p class="name">Menu</p>
+  <div class="hamburger">
+    <span></span>
+  </div>
+  <button class="tablinks show" onclick="openTab(event, 'Home')">Inicio</button>
+  <button class="tablinks show" onclick="openTab(event, 'Sobre')">Sobre</button>
+  <button class="tablinks show" onclick="openTab(event, 'Projetos')">Projetos</button>
+  <button class="tablinks show" onclick="openTab(event, '#rodape')">Contato</button>
+</div>
+
+<div id="Home" class="tabcontent">
+  <h3><span class="typewriter">PLACEHOLDER</span></h3>
+  <p>SITE EM CONSTRUÇÃO</p>
+</div>
+
+<div id="Sobre" class="tabcontent">
+  <h3><span class="typewriter">PLACEHOLDERRRR</span></h3>
+  <p>SITE EM CONSTRUÇÃO</p>
+</div>
+
+<div id="Projetos" class="tabcontent">
+  <h3><span class="typewriter">PLACEHOLDER</span></h3>
+  <p>SITE EM CONSTRUÇÃO.</p>
+</div>
+
+<div class="footer" id="rodape">
+  <p>Contato:</p>
+  <a href="mailto:gabriell_medina@Live.com"><i class="fab fa-envelope"></i> gabriell_medina@live.com</a>
+  <div class="icons">
+    <a href="https://wa.me/5513991363121?text" target="_blank"><img src="https://imgur.com/NdRmcgk.png" alt="Whatsapp"></a>
+    <a href="https://www.linkedin.com/in/gabriellmedina/" target="_blank"><img src="https://imgur.com/cjLEO7C.png" alt="Linkedin"></a>
+    <a href="https://github.com/gabs4841" target="_blank"><img src="https://imgur.com/yBVZk4a.png" alt="Github"></a>
+  </div>
+  <p>© 2023 Gabriel Medina da Assunção</p>
+</div>
+
+<script>
+// Função para esconder os botões tablinks quando a página for carregada
+function hideTablinks() {
+  var tablinks = document.getElementsByClassName("tablinks");
+  for (var i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.display = "none";
+  }
+}
+
+// Função para mostrar ou esconder os botões tablinks quando o usuário clicar no menu hambúrguer
+function toggleTablinks() {
+  var tablinks = document.getElementsByClassName("tablinks");
+  var show = false;
+  for (var i = 0; i < tablinks.length; i++) {
+    if (tablinks[i].style.display == "none") {
+      show = true;
+      break;
+    }
+  }
+  for (var i = 0; i < tablinks.length; i++) {
+    if (show) {
+      tablinks[i].style.display = "block";
+    } else {
+      tablinks[i].style.display = "none";
+    }
+  }
+}
+
+// Função para abrir uma aba quando o usuário clicar em um botão tablink
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  
+  // Esconder todos os elementos com a classe "tabcontent"
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remover a classe "active" de todos os elementos com a classe "tablinks"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Mostrar o elemento com o id igual ao nome da aba e adicionar a classe "active" ao botão que abriu a aba
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+  display: none; 
+
+  // Fechar o menu hambúrguer e esconder os botões tablinks
+  var hamburger = document.getElementsByClassName("hamburger")[0];
+  hamburger.classList.remove("is-active");
+}
+
+// Função para exibir o texto com efeito de digitação
+function showTypingText() {
+  var texts = document.querySelectorAll(".typewriter");
+  texts.forEach(function(element) {
+    var text = element.innerText;
+    element.innerText = "";
+    var index = 0;
+
+    // Função para simular a digitação
+    function typeWriter() {
+      if (index < text.length) {
+        element.innerText += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100); // Velocidade de digitação (em milissegundos)
+      }
+    }
+
+    typeWriter();
+  });
+}
+
+// Chamar a função hideTablinks quando a página for carregada
+window.onload = function () {
+  hideTablinks();
+  showTypingText(); // Chamar a função showTypingText para exibir o texto com efeito de digitação
+  openTab(null, 'Home'); // Chamar a função openTab para exibir a aba "Inicio" quando a página carregar
+};
+
+// Adicionar um evento de clique ao menu hambúrguer para chamar a função toggleTablinks
+var hamburger = document.getElementsByClassName("hamburger")[0];
+hamburger.addEventListener("click", function() {
+  this.classList.toggle("is-active");
+  toggleTablinks();
+});
+</script>
+
+<script src="https://kit.fontawesome.com/SEU_CODIGO.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
