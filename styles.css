@@ -191,7 +191,6 @@ header::before {
       display: inline-block; 
       margin-right: 10px;
     }
-
   .icons {
       display: flex;
       justify-content: space-between;
