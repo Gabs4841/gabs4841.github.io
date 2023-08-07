@@ -1,5 +1,6 @@
-# <a href="https://gabs4841.github.io/"> Portfólio </a></h1>
-<p>Meu portfólio. Aplicação criada para mostrar os projetos que irei desenvolver durante minha carreira.</p>
+# <a href="https://gabs4841.github.io/"> Portfólio </a>
+
+Meu portfólio que ainda está em desenvolvimento. 
 
 <div style="display: inline_block">
 <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
@@ -7,5 +8,5 @@
 <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
 </div>
 
-# <h2> Créditos </h2>
-Esse site foi criado por [Gabriel Medina da Assunção](https://github.com/gabs4841).
+# Créditos
+Esse aplicativo foi criado por [Gabriel Medina da Assunção](https://github.com/gabs4841).
