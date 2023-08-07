@@ -1,4 +1,4 @@
-# <a href="https://ymatheusvieira.vercel.app/"> Portfólio </a></h1>
+# <a href="https://gabs4841.github.io/"> Portfólio </a></h1>
 <p>Meu portfólio. Aplicação criada para mostrar os projetos que irei desenvolver durante minha carreira.</p>
 
 <div style="display: inline_block">
@@ -8,4 +8,4 @@
 </div>
 
 # <h2> Créditos </h2>
-Esse programa foi criado por [Gabriel Medina da Assunção](https://github.com/gabs4841).
+Esse site foi criado por [Gabriel Medina da Assunção](https://github.com/gabs4841).
