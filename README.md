@@ -1,4 +1,4 @@
-<h1> <a href=“https://gabs4841.github.io/” target=“_blank”>Portfolio</a></h1>
+<a href=“https://gabs4841.github.io/” target=“_blank”>Portfolio</a>
 
 Meu portfólio que ainda está em desenvolvimento. Ele é um site que apresenta os meus projetos, as minhas habilidades e as minhas experiências como desenvolvedor web.
 
