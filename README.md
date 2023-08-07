@@ -7,5 +7,5 @@
 <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
 </div>
 
-# <h2>:hammer: Créditos</h2>
+# <h2> Créditos </h2>
 Esse programa foi criado por [Gabriel Medina da Assunção](https://github.com/gabs4841).
