@@ -27,12 +27,10 @@ function openTab(evt, tabName) {
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].classList.remove("active");
   }
   document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-  var hamburger = document.getElementsByClassName("hamburger")[0];
-  hamburger.classList.remove("is-active");
+  evt.currentTarget.classList.add("active");
 }
 
 function showTypingText() {
