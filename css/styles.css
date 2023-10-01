@@ -1,19 +1,15 @@
 @import 'mediaquery.css';
-
 .project {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, auto); 
   gap: 20px;
   align-items: center;
 }
-
 .links {
   display: flex;
   gap: 10px;
 }
-
-
 .project a {
   background-color: #333333;
   color: #ffffff;
