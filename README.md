@@ -1,6 +1,6 @@
 <h1><a href="https://gabs4841.github.io/" target="_blank" rel=“noopener noreferrer”>Portfólio</a></h1>
 
-Meu portfólio que ainda está em desenvolvimento.
+Meu portfólio que está em desenvolvimento.
 
 # Tecnologias utilizadas
 
