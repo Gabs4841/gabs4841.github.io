@@ -155,3 +155,10 @@ header::before {
       font-weight: bold;
       transition: all 0.3s ease-in-out;
     }
+.tabcontent p {
+  font-size: 16px;
+}
+
+.project p {
+  font-weight: bold;
+}
