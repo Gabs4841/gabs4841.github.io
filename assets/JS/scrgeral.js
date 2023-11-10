@@ -1,17 +1,3 @@
-function toggleTablinks() {
-  var tablinks = document.getElementsByClassName("tablinks");
-  var show = false;
-  for (var i = 0; i < tablinks.length; i++) {
-    if (tablinks[i].style.display == "none") {
-      show = true;
-      break;
-    }
-  }
-  for (var i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.display = show ? "block" : "none";
-  }
-}
-
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -44,7 +30,6 @@ function showTypingText() {
 }
 
 window.onload = function () {
-  hideTablinks();
   showTypingText();
   openTab(null, 'Home');
 };
