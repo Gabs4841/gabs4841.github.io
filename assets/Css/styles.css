@@ -131,6 +131,7 @@ header::before {
     .footer a { 
       color: #ffffff; 
       text-decoration: none;
+      font-weight: bold;
     }
     .footer a:hover { 
       color: #cccccc;
