@@ -1,10 +1,3 @@
-function hideTablinks() {
-  var tablinks = document.getElementsByClassName("tablinks");
-  for (var i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.display = "none";
-  }
-}
-
 function toggleTablinks() {
   var tablinks = document.getElementsByClassName("tablinks");
   var show = false;
